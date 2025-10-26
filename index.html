@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ✅ Base Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#6B46C1">
+
+  <!-- ✅ SEO Meta -->
+  <title>ClearMind — Campus Mental Wellness</title>
+  <meta name="description"
+        content="ClearMind is your 24/7 campus mental wellness companion — emotional check-ins, anonymous chat, peer support, emergency help, and smart academic balance." />
+  <meta name="keywords"
+        content="ClearMind, Campus Wellness, Mental Health, Student Support, Anonymous Chat, SOS, Peer Support, Anxiety Help" />
+  <meta name="author" content="ClearMind Team" />
+
+  <!-- ✅ Open Graph Preview -->
+  <meta property="og:title" content="ClearMind — Campus Mental Wellness" />
+  <meta property="og:description"
+        content="A supportive space for students: Feel heard. Stay safe. Thrive emotionally & academically." />
+  <meta property="og:image" content="/og-clearmind.png" />
+  <meta property="og:url" content="https://clearmind.app" />
+  <meta property="og:type" content="website" />
+
+  <!-- ✅ Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ClearMind — Your Student Wellness Companion" />
+  <meta name="twitter:description"
+        content="Real support for real student struggles. Zero judgment. 100% secure." />
+  <meta name="twitter:image" content="/og-clearmind.png" />
+
+  <!-- ✅ PWA Support -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- ✅ Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+
+  <!-- ✅ Fonts -->
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap">
+  </noscript>
+
+  <!-- ✅ Policies -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Permissions-Policy"
+        content="fullscreen=(self), geolocation=(self), microphone=(self)" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
+  <!-- ✅ Initial Body Style -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      overflow-x: hidden;
+    }
+    #root {
+      min-height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ App Root -->
+  <div id="root"></div>
+
+  <!-- ✅ JS Entry -->
+  <script type="module" src="/src/main.jsx" defer></script>
+
+  <!-- ✅ Service Worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js").catch(console.error);
+    }
+  </script>
+</body>
+</html>

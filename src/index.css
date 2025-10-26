@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 14px;
+}
+
+html, body, #root { height: 100%; }
+
+body { @apply bg-background text-text; }
+
+.container-lg { @apply container max-w-7xl; }
